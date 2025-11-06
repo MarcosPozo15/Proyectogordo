@@ -1,0 +1,3 @@
+CREATE DATABASE PrecioLuz;
+USE precioLuz;
+CREATE TABLE DIAS;
