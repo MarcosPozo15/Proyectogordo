@@ -29,5 +29,23 @@
     <div class="subtitulo">
         <h2>Precio de la luz por horas hoy</h2>
     </div>
+     <div class="subtitulo2">
+        <h2 id="lugarfecha"></h2>
+       
+    </div>
+    <div class="datepicker">
+        <input type="date" id="fecha" name="fecha">
+
+
+    </div>
+    <script>
+        const fechaelegida = document.getElementById("fecha");
+        const result = document.getElementById("lugarfecha");
+
+        fechaelegida.addEventListener("change",(event)=>{
+            result.textContent = event.target.value;
+        });
+    </script>
+
 </body>
 </html>

@@ -46,3 +46,20 @@ margin-left: 200px;
     justify-self: center;
     height: 18px;
 }
+.subtitulo{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    border: solid black;
+}
+.subtitulo2{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    border: solid black;
+}
+.datepicker {
+    border: solid black;
+  padding: 10px;
+
+}
