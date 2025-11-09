@@ -1,5 +1,5 @@
 <?php
-// --- Datos de conexión a la base de datos ---
+//Datos de conexión a la base de datos
 $dsn  = "mysql:host=localhost;dbname=PrecioLuz";
 $user = "root";
 $pass = "";
@@ -84,8 +84,10 @@ try {
 
 <div class="actualizacion">
   <p>
-    <img src="img/calendar-days-svgrepo-com (2).svg">
-    Actualizado el día <?php echo fecha_bonita(date('Y-m-d')); ?>
+    <img src="img/calendar-days-svgrepo-com (2).svg">Actualizado el día 
+    <?php 
+    echo fecha_bonita(date('Y-m-d')); 
+    ?>
     <img src="img/clock-three-svgrepo-com (1).svg"> 3 minutos de lectura
   </p>
 </div>
@@ -99,7 +101,7 @@ try {
   <h2 id="lugarfecha"><?php echo fecha_bonita($fechaISO); ?></h2>
 </div>
 
-<!--Formulario para elegir la fecha (sin AJAX, solo recarga la página) -->
+<!--Formulario para elegir la fecha -->
 <form method="get" class="datepicker" style="margin-bottom:1rem;">
   <input type="date" id="fecha" name="fecha"
          value="<?php echo htmlspecialchars($fechaISO); ?>"
@@ -128,7 +130,7 @@ try {
 const etiquetas = <?php echo json_encode($horas); ?>;   // las horas
 const valores = <?php echo json_encode($preciosHoras); ?>; // los precios
 
-// Crear la gráfica con Chart.js ---
+// Crear la gráfica
 const ctx = document.getElementById('grafica').getContext('2d');
 new Chart(ctx, {
   type: 'bar',
