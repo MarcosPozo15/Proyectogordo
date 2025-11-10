@@ -118,12 +118,19 @@ try {
 
 <!-- Gráfica -->
 <div class="primeragrafica">
-  <canvas id="grafica"></canvas>
+  <div class="canva1grafica">
+    <canvas id="grafica"></canvas>
+  </div>
 </div>
-
+<!--Este es el error si ocurre algo con la BBDD-->
 <?php if (!empty($error)): ?>
   <pre style="color:red;"><?php echo $error; ?></pre>
 <?php endif; ?>
+<div class="sabiasque">
+  <div class="cuadrado">
+
+  </div>
+</div>
 
 <script>
 // Aquí preparo los datos para la gráfica ---
@@ -139,12 +146,14 @@ new Chart(ctx, {
     datasets: [{
       label: 'Precio €/kWh por hora',
       data: valores,
-      backgroundColor: 'rgba(54,162,235,0.2)',
+      backgroundColor: ['rgba(255, 0, 0,0.5)', 'rgba(255, 165, 0, 1)', 'rgba(0, 255, 0,0.5)'],
       borderColor: 'rgba(54,162,235,1)',
       borderWidth: 1
     }]
   },
   options: {
+     responsive: true,
+    maintainAspectRatio: false, 
     scales: { y: { beginAtZero: true } }
   }
 });
