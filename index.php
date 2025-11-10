@@ -127,16 +127,22 @@ try {
   <pre style="color:red;"><?php echo $error; ?></pre>
 <?php endif; ?>
 <div class="sabiasque">
-  <div class="cuadrado">
-
-  </div>
+  abc
 </div>
 
 <script>
 // Aquí preparo los datos para la gráfica ---
 const etiquetas = <?php echo json_encode($horas); ?>;   // las horas
 const valores = <?php echo json_encode($preciosHoras); ?>; // los precios
-
+const colores = valores.map(precio =>{
+  if (precio< 0.10){
+    return 'rgba(0, 200, 0, 0.6)';
+  }else if (precio>=0.10 && precio<= 0.12){
+    return 'rgba(255, 165, 0, 0.7)';
+  }else{
+    return'rgba(255, 0, 0, 0.6)';
+  }
+})
 // Crear la gráfica
 const ctx = document.getElementById('grafica').getContext('2d');
 new Chart(ctx, {
@@ -146,7 +152,7 @@ new Chart(ctx, {
     datasets: [{
       label: 'Precio €/kWh por hora',
       data: valores,
-      backgroundColor: ['rgba(255, 0, 0,0.5)', 'rgba(255, 165, 0, 1)', 'rgba(0, 255, 0,0.5)'],
+      backgroundColor: colores ,
       borderColor: 'rgba(54,162,235,1)',
       borderWidth: 1
     }]
