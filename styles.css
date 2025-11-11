@@ -37,11 +37,11 @@ margin-left: 200px;
     justify-content: center;
 }
 .actualizacion{
-  
     display:flex;
     align-items: center;
     text-align: center;
-    
+
+    margin-left:380px ;
 }
 
 .actualizacion img{
@@ -61,13 +61,13 @@ margin-left: 200px;
     
 }
 .datepicker {
-    margin-left: 100px;
+margin-left: 380px;
   padding: 10px;
 }
 
 .primeragrafica {
     border-radius: 20px;
-    box-shadow: 0px 0px 15px 5px;
+    box-shadow: 0px 0px 15px 0px;
     width: 60%;
     display: flex;
     justify-content: center;
@@ -83,30 +83,110 @@ margin-left: 200px;
   aspect-ratio: 2 / 1; /* Mantiene proporción automática */
   
 }
-.sabiasque{
-   padding: 5px;
-    justify-self: center;
+.cajones {
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin:20px 0;
+margin-top: 30px;
+display: flex;
+justify-self: center;
+margin: 30px;
+gap: 200px;
+
+}
+ .cajon1{
+    box-shadow: 0px 0px 15px 0px;
     border-radius: 20px;
-    box-shadow: 0px 0px 15px 5px;
     height: 200px;
-    width: 60%;
-}
-.cajones{
-    margin-top: 30px;
-    display: flex;
-    justify-self: center;
-    margin: 30px;
-}
-.cajon1{
-     box-shadow: 0px 0px 15px 5px;
-     
-}
+    width: 200px;
+    padding-left: 30px;
+} 
 .cajon2{
-     box-shadow: 0px 0px 15px 5px;
+    box-shadow: 0px 0px 15px 0px;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    padding-left: 30px;
 }
 .cajon3{
-     box-shadow: 0px 0px 15px 5px;
+    box-shadow: 0px 0px 15px 0px;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    padding-left: 30px;
 }
+.big {
+text-align:center;
+box-shadow:0 0 15px 0px ;
+border-radius:16px;
+padding:18px;
+margin:20px;
+justify-self: center;
+height: 200px;
+width: 58%;
+}
+.big h2 {
+font-size:40px;
+margin:8px 0;
+}
+.verde {
+color:#0a9f2e;
+}
+.rojo {
+color:#c22;
+}
+.naranja {
+color:#d88500;
+}   
+.lista-horas{
+padding: 5px;
+border-radius:16px;
+box-shadow:0 0 15px 15px #00000010;
+max-width: 900px;
+margin: 20px auto 40px;
+}
+.lista-horas h3{
+
+margin: 0 0 12px 0;
+color: #444;
+}
+.horas{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.horas li{
+display: flex;
+align-items: center;
+gap: 16px;
+padding: 6px 4px;
+}
+.dot{
+width: 14px;
+height: 14px;
+border-radius: 50%;
+display: inline-block;
+}
+.tramo{
+flex: 1;
+color: #333;
+}
+.precio{
+min-width: 140px;
+text-align: right;
+font-weight: 600;
+}
+.dot.verde{
+background:#0a9f2e;
+}
+.dot.naranja{ 
+background:#d88500;
+}
+.dot.rojo{
+background:#c22;
+}
+ 
 
 
 
