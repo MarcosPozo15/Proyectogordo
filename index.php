@@ -1,3 +1,4 @@
+<!--PHP-->
 <?php
 //Datos de conexión a la base de datos
 $dsn  = "mysql:host=localhost;dbname=PrecioLuz";
@@ -54,6 +55,9 @@ try {
   $error = $e->getMessage();
 }
 ?>
+
+
+<!--HTML-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -127,17 +131,46 @@ try {
   <pre style="color:red;"><?php echo $error; ?></pre>
 <?php endif; ?>
 <div class="sabiasque">
-  abc
+  <p><b>¿Sabias qué?</b></p>
+  <p>Si no quieres modificar tu rutina, hoy podrías utilizar este tramo para poner lavadoras o cocinar ya que está ligeramente más bajo.</p>
+  <div id="sabiasvalores">
+    <p></p>
+    <p></p>
+  </div>
+  <p>Este es el tramo de 2 o 3 horas más económicas durante el día (de 7 a 21 horas), que puede o no contener la hora más económica del día</p>
+  
+</div>
+<div class="cajones">
+<div class="cajon1">
+<p>Precio medio del día</p>
+</div>
+<div class="cajon2">
+<p>Precio mas bajo del día</p>
+</div>
+<div class="cajon3">
+<p>Precio mas alto del día</p>
+</div>
 </div>
 
 <script>
+  function encontrarTramo() {
+    let arr1=[[]];
+    valores.forEach(element => {
+      if (element.precio<0.10) {
+
+        
+      }
+      
+    });
+    
+  }
 // Aquí preparo los datos para la gráfica ---
 const etiquetas = <?php echo json_encode($horas); ?>;   // las horas
 const valores = <?php echo json_encode($preciosHoras); ?>; // los precios
 const colores = valores.map(precio =>{
   if (precio< 0.10){
     return 'rgba(0, 200, 0, 0.6)';
-  }else if (precio>=0.10 && precio<= 0.12){
+  }else if (precio>=0.10 && precio<= 0.20){
     return 'rgba(255, 165, 0, 0.7)';
   }else{
     return'rgba(255, 0, 0, 0.6)';

@@ -61,15 +61,19 @@ margin-left: 200px;
     
 }
 .datepicker {
-    
+    margin-left: 100px;
   padding: 10px;
 }
 
 .primeragrafica {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 5px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 30px;
 }
 
 .canva1grafica {
@@ -80,9 +84,28 @@ margin-left: 200px;
   
 }
 .sabiasque{
-    background-color: black;
+   padding: 5px;
+    justify-self: center;
     border-radius: 20px;
-    box-shadow: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 15px 5px;
+    height: 200px;
+    width: 60%;
+}
+.cajones{
+    margin-top: 30px;
+    display: flex;
+    justify-self: center;
+    margin: 30px;
+}
+.cajon1{
+     box-shadow: 0px 0px 15px 5px;
+     
+}
+.cajon2{
+     box-shadow: 0px 0px 15px 5px;
+}
+.cajon3{
+     box-shadow: 0px 0px 15px 5px;
 }
 
 
