@@ -120,9 +120,7 @@ try {
   <?php endif; ?>
 </div>
 
-
-
-<!-- TRES CAJONES (usa tus clases de CSS) -->
+<!-- TRES CAJONES ( -->
 <div class="cajones">
   <div class="cajon1">
     <p>Precio medio del día</p>
